@@ -1,0 +1,143 @@
+# Hand Gesture Control System - Git Ignore File
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+debug.log
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Camera/Video files
+*.mp4
+*.avi
+*.mov
+*.mkv
+test_video.*
+camera_test.*
+
+# Configuration files (sensitive)
+config.ini
+secrets.json
+.env
+
+# Test files
+test_images/
+test_videos/
+test_data/
+
+# Performance monitoring
+*.prof
+*.profile
+
+# Documentation build
+docs/_build/
+site/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pre-commit
+.pre-commit-config.yaml
+
+# Package files
+*.tar.gz
+*.zip
+*.exe
+
+# Audio files (for testing)
+*.wav
+*.mp3
+test_audio.*
+
+# Screenshots (temporary)
+screenshot_*.png
+temp_screenshot.*
+
+# Model files (if using ML models)
+*.h5
+*.pkl
+*.joblib
+models/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup files
+*.bak
+*.backup
+*_backup.*
+
+# System files
+desktop.ini
+$RECYCLE.BIN/
+
+# Project specific
+hand_gesture_control_old.py
+backup_*.py
+test_*.py
+debug_*.py
