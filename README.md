@@ -5,36 +5,35 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.8+-green.svg)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10+-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 **Control your computer with hand gestures! A complete mouse replacement system using computer vision.**
-
-[![Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-
-*Click the image above to watch the demo video*
 
 </div>
 
 ## 🚀 Features
 
 ### ✨ **Complete Mouse Replacement**
+
 - **Cursor Movement**: Navigate with your index finger
 - **Left Click**: Bend your middle finger
-- **Right Click**: Bend your ring finger  
+- **Right Click**: Bend your ring finger
 - **Double Click**: Two quick middle finger bends
 - **Scroll Control**: Move thumb up/down to scroll
 
 ### 🎵 **Volume Control**
+
 - **Volume Adjustment**: Control volume with thumb-index distance
 - **Volume Lock**: Raise pinkie to lock current volume
 - **Visual Feedback**: Real-time volume percentage display
 
 ### 👥 **Multi-Hand Support**
+
 - **Left/Right Hand Detection**: Automatic hand type recognition
 - **Color-Coded Feedback**: Green for left hand, Red for right hand
 - **Flexible Usage**: Switch between hands seamlessly
 
 ### 🎯 **Precision Control**
+
 - **Control Box**: Centered 1/3 screen area for precise movement
 - **Smooth Movement**: Advanced smoothing algorithms
 - **Visual Feedback**: Enhanced cursor with glow effects
@@ -44,15 +43,18 @@
 <div align="center">
 
 ### Main Interface
-![Main Interface](images/main_interface.png)
+
+![Main Interface](Images/1.png)
 *The main control interface showing hand detection and gesture instructions*
 
 ### Gesture Recognition
-![Gesture Recognition](images/gesture_recognition.png)
+
+![Gesture Recognition](Images/2.png)
 *Real-time gesture recognition with visual feedback*
 
 ### Volume Control
-![Volume Control](images/volume_control.png)
+
+![Volume Control](Images/3.png)
 *Volume control interface with distance-based adjustment*
 
 </div>
@@ -60,6 +62,7 @@
 ## 🛠️ Installation
 
 ### Prerequisites
+
 - Python 3.8 or higher
 - Webcam
 - Windows 10/11 (for audio control features)
@@ -67,17 +70,18 @@
 ### Quick Setup
 
 1. **Clone the repository**
+
    ```bash
-   git clone https://github.com/yourusername/hand-gesture-control.git
+   git clone https://github.com/Aditya14Sharma01/Hand-Gesture-Control.git
    cd hand-gesture-control
    ```
-
 2. **Install dependencies**
+
    ```bash
    pip install -r requirements.txt
    ```
-
 3. **Run the application**
+
    ```bash
    python hand_gesture_control.py
    ```
@@ -88,6 +92,7 @@
 <summary>Click to expand detailed installation steps</summary>
 
 #### Step 1: Python Environment Setup
+
 ```bash
 # Create virtual environment (recommended)
 python -m venv hand_gesture_env
@@ -98,18 +103,22 @@ pip install -r requirements.txt
 ```
 
 #### Step 2: System Requirements
+
 - **Webcam**: Any USB webcam or built-in camera
 - **Lighting**: Ensure good lighting for hand detection
 - **Space**: Clear area in front of camera for hand gestures
 
 #### Step 3: Audio Setup (Windows)
+
 The volume control feature requires Windows audio system access:
+
 ```bash
 # Install audio dependencies
 pip install pycaw comtypes
 ```
 
 #### Step 4: Test Installation
+
 ```bash
 # Test camera access
 python -c "import cv2; cap = cv2.VideoCapture(0); print('Camera OK' if cap.isOpened() else 'Camera Error')"
@@ -124,16 +133,16 @@ python -c "import mediapipe as mp; print('MediaPipe OK')"
 
 ### Basic Gestures
 
-| Gesture | Action | How to Perform |
-|---------|--------|----------------|
-| **🖱️ Move Cursor** | Navigate | Move index finger within the yellow control box |
-| **👆 Left Click** | Click | Bend middle finger down |
-| **🖱️ Right Click** | Right-click | Bend ring finger down |
-| **👆👆 Double Click** | Double-click | Two quick middle finger bends |
-| **📜 Scroll Up** | Scroll up | Move thumb up (high position) |
-| **📜 Scroll Down** | Scroll down | Move thumb down (low position) |
-| **🔊 Volume** | Adjust volume | Change distance between thumb and index finger |
-| **🔒 Volume Lock** | Lock volume | Raise pinkie finger |
+| Gesture                     | Action        | How to Perform                                  |
+| --------------------------- | ------------- | ----------------------------------------------- |
+| **🖱️ Move Cursor**  | Navigate      | Move index finger within the yellow control box |
+| **👆 Left Click**     | Click         | Bend middle finger down                         |
+| **🖱️ Right Click**  | Right-click   | Bend ring finger down                           |
+| **👆👆 Double Click** | Double-click  | Two quick middle finger bends                   |
+| **📜 Scroll Up**      | Scroll up     | Move thumb up (high position)                   |
+| **📜 Scroll Down**    | Scroll down   | Move thumb down (low position)                  |
+| **🔊 Volume**         | Adjust volume | Change distance between thumb and index finger  |
+| **🔒 Volume Lock**    | Lock volume   | Raise pinkie finger                             |
 
 ### Advanced Usage
 
@@ -141,16 +150,19 @@ python -c "import mediapipe as mp; print('MediaPipe OK')"
 <summary>Click to expand advanced usage tips</summary>
 
 #### Precision Control
+
 - **Control Box**: The yellow rectangle is your active area (1/3 of screen)
 - **Smooth Movement**: Cursor movement is smoothed for better control
 - **Speed Adjustment**: Modify `cursor_speed` in the code for different sensitivity
 
 #### Volume Control
+
 - **Distance Method**: Thumb and index finger distance controls volume
 - **Lock Feature**: Raise pinkie to lock current volume level
 - **Range**: 30% to 100% volume range
 
 #### Multi-Hand Support
+
 - **Automatic Detection**: System detects left or right hand automatically
 - **Color Coding**: Green landmarks for left hand, red for right hand
 - **Flexible Switching**: Use either hand or both hands
@@ -185,6 +197,7 @@ min_dist, max_dist = 20, 200  # Distance range for volume control
 <summary>Click to expand advanced configuration</summary>
 
 #### Camera Settings
+
 ```python
 # Camera resolution (modify in VideoCapture)
 cap = cv2.VideoCapture(0)  # Camera index
@@ -193,6 +206,7 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)   # Height
 ```
 
 #### Hand Detection Settings
+
 ```python
 # MediaPipe hand detection parameters
 hands = mp_hands.Hands(
@@ -203,6 +217,7 @@ hands = mp_hands.Hands(
 ```
 
 #### Performance Tuning
+
 ```python
 # For better performance on slower systems
 smoothening = 10        # Higher = smoother but slower
@@ -236,6 +251,7 @@ Hand Gesture Controller
 <summary>Click to expand technical details</summary>
 
 #### HandGestureController Class
+
 - **`__init__()`**: Initialize all components
 - **`setup_audio()`**: Configure audio system
 - **`handle_cursor_control()`**: Process cursor movement
@@ -245,6 +261,7 @@ Hand Gesture Controller
 - **`run()`**: Main application loop
 
 #### Key Methods Explained
+
 ```python
 def handle_cursor_control(self, frame, hand_landmarks, w, h):
     """Handle cursor movement with control box mapping"""
@@ -269,6 +286,7 @@ def handle_click_controls(self, frame, hand_landmarks, w, h):
 <summary>Click to expand troubleshooting guide</summary>
 
 #### Camera Issues
+
 ```bash
 # Problem: Camera not detected
 # Solution: Check camera permissions and USB connection
@@ -276,6 +294,7 @@ python -c "import cv2; print([i for i in range(10) if cv2.VideoCapture(i).isOpen
 ```
 
 #### Hand Detection Issues
+
 ```bash
 # Problem: Hands not detected
 # Solution: Check lighting and hand position
@@ -285,6 +304,7 @@ python -c "import cv2; print([i for i in range(10) if cv2.VideoCapture(i).isOpen
 ```
 
 #### Audio Control Issues
+
 ```bash
 # Problem: Volume control not working
 # Solution: Check Windows audio system
@@ -294,6 +314,7 @@ python -c "import cv2; print([i for i in range(10) if cv2.VideoCapture(i).isOpen
 ```
 
 #### Performance Issues
+
 ```bash
 # Problem: Laggy performance
 # Solution: Optimize settings
@@ -306,16 +327,16 @@ python -c "import cv2; print([i for i in range(10) if cv2.VideoCapture(i).isOpen
 
 ### Error Messages
 
-| Error | Cause | Solution |
-|-------|-------|----------|
-| `Camera not found` | No camera detected | Check camera connection |
-| `Audio setup failed` | Audio system issue | Check Windows audio |
-| `Hand not detected` | Poor lighting/position | Improve lighting |
-| `Cursor stuck` | High sensitivity | Reduce cursor_speed |
+| Error                  | Cause                  | Solution                |
+| ---------------------- | ---------------------- | ----------------------- |
+| `Camera not found`   | No camera detected     | Check camera connection |
+| `Audio setup failed` | Audio system issue     | Check Windows audio     |
+| `Hand not detected`  | Poor lighting/position | Improve lighting        |
+| `Cursor stuck`       | High sensitivity       | Reduce cursor_speed     |
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions!
 
 ### How to Contribute
 
@@ -329,7 +350,7 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ```bash
 # Clone and setup development environment
-git clone https://github.com/yourusername/hand-gesture-control.git
+git clone https://github.com/Aditya14Sharma01/hand-gesture-control.git
 cd hand-gesture-control
 pip install -r requirements.txt
 
@@ -359,9 +380,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/hand-gesture-control/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/hand-gesture-control/discussions)
-- **Email**: your.email@example.com
+- **Issues**: [GitHub Issues](https://github.com/Aditya14Sharma01/hand-gesture-control/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Aditya14Sharma01/hand-gesture-control/discussions)
+- **Email**: aditya1401sharma@gmail.com
 
 ## 🔮 Future Enhancements
 
@@ -379,6 +400,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **⭐ Star this repository if you found it helpful!**
 
-Made with ❤️ by [Your Name](https://github.com/yourusername)
+Made with ❤️ by [Aditya Sharma](https://github.com/Aditya14Sharma01)
 
 </div>
